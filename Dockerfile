@@ -1,2 +1,3 @@
 FROM appropriate/curl
-CMD curl -s http://programmingexcuses.com/ | grep '<a ' | sed -re 's/.*333;">([^<]+).*/\1/'
+ADD ./excuse.sh /usr/local/bin/excuse
+CMD excuse
